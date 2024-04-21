@@ -10,6 +10,10 @@ public class Ball : MonoBehaviour
         _listener = listener;
         _color = color;
         listener.OnAwake(color);
+        if (TryGetComponent(out MeshRenderer renderer))
+        {
+            renderer.material = ColorsToMaterialMap.GetMaterialByColor(color);
+        }
     }
 
     private void OnMouseDown()

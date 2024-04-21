@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class BallsBootstrap : MonoBehaviour
 {
+    [SerializeField] ColorsToMaterialMap _colorMap;
+
     [SerializeField] List<BallSpawner> _spawners;
     [SerializeField] UIBallCounter _uiCounter;
+
     [SerializeField] UIWinCanvasController _uiWinCanvas;
     [SerializeField] UIStartCanvasController _uiStartCanvas;
     [SerializeField] UIGameCanvasController _uiGameCanvas;
@@ -15,6 +18,7 @@ public class BallsBootstrap : MonoBehaviour
 
     private void Awake()
     {
+        _colorMap.Init();
         _uiCounter.Init();
         _uiWinCanvas.Init();
         _uiStartCanvas.Init();

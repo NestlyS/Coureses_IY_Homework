@@ -1,8 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Color", menuName = "Color")]
 public class ColorsToMaterialMap : ScriptableObject
 {
+    [Serializable]
     private class ColorMaterialPair
     {
         [SerializeField] private Material _material;
